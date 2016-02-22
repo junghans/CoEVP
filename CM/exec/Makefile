@@ -174,6 +174,7 @@ kintest: $(KINTEST_OBJS)
 dummy: ;
 
 .cxxflags: dummy
+	$(CXX) --version
 	@[ -f $@ ] || touch $@
 	@echo "CXXFLAGS=$(CXXFLAGS)" | cmp -s $@ - || echo "CXXFLAGS=$(CXXFLAGS)" > $@
 
