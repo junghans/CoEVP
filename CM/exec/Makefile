@@ -162,7 +162,7 @@ endif
 
 OPTFLAGS = $(CXXFLAGS) $(CCFLAGS)
 
-MAKEDEPEND = gcc -MM -MT $*.o $(CXXFLAGS) -o $*.d.tmp $<
+MAKEDEPEND = ${CXX} -MM -MT $*.o $(CXXFLAGS) -o $*.d.tmp $<
 
 default: libcm
 
